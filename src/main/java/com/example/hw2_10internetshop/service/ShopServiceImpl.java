@@ -4,6 +4,7 @@ import com.example.hw2_10internetshop.cart.ShoppingCart;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -13,15 +14,16 @@ public class ShopServiceImpl implements ShopService {
 
 
     @Override
-    public void addItemToCart(Integer itemID) {
-
-        shoppingCart.addItemToCart(itemID);
+    public void addItemToCart(List<Integer> itemID) {
+        for (Integer itemIDs : itemID) {
+            shoppingCart.addItemToCart(itemIDs);
+        }
         shoppingCart.initMethod();
     }
 
     @Override
-    public ShoppingCart getCart() {
-        return this.shoppingCart;
+    public List<Integer> getCart() {
+        return this.shoppingCart.getItemID();
     }
 
 }

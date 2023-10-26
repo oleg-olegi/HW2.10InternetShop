@@ -1,5 +1,6 @@
 package com.example.hw2_10internetshop.cart;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -30,7 +31,9 @@ public class ShoppingCart {
         return this.itemID;
     }
 
+    @PostConstruct
     public void initMethod() {
         System.out.println("Bean  is created");
-    }
+    }//если в строке добавлять через запятую несколько итемов
+    //
 }
