@@ -1,6 +1,5 @@
 package com.example.hw2_10internetshop.cart;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 

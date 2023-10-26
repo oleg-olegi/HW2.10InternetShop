@@ -12,12 +12,13 @@ public class ShopController {
 
     private final ShopServiceImpl shopServiceImpl;
 
-
     @GetMapping("/add")
-    public ShoppingCart addItemToCart(@RequestParam Integer itemID) {
+    public Integer addItemToCart(@RequestParam Integer itemID) {
         shopServiceImpl.addItemToCart(itemID);
-        return shopServiceImpl.getCart();
+        return itemID;
     }
+
+
 }
 
 
