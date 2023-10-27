@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/
+/src/main/java/com/example/hw2_10internetshop/
